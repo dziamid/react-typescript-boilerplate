@@ -2,7 +2,6 @@
  * Test the HomePage
  */
 
-import expect = require('expect');
 import { shallow, mount } from 'enzyme';
 import React = require('react');
 
@@ -40,7 +39,7 @@ describe('<HomePage />', () => {
   });
 
   it('should render fetch the repos on mount if a username exists', () => {
-    const submitSpy = expect.createSpy();
+    const submitSpy = jest.fn();
     mount(
       <IntlProvider locale="en">
         <HomePage
@@ -73,7 +72,7 @@ describe('<HomePage />', () => {
   });
 
   it('should link to /features', () => {
-    const openRouteSpy = expect.createSpy();
+    const openRouteSpy = jest.fn();
 
     // Spy on the openRoute method of the HomePage
     const openRoute = (dest) => {
@@ -95,13 +94,13 @@ describe('<HomePage />', () => {
   describe('mapDispatchToProps', () => {
     describe('onChangeUsername', () => {
       it('should be injected', () => {
-        const dispatch = expect.createSpy();
+        const dispatch = jest.fn();
         const result = mapDispatchToProps(dispatch);
-        expect(result.onChangeUsername).toExist();
+        expect(result.onChangeUsername).toBeTruthy();
       });
 
       it('should dispatch changeUsername when called', () => {
-        const dispatch = expect.createSpy();
+        const dispatch = jest.fn();
         const result = mapDispatchToProps(dispatch);
         const username = 'mxstbr';
         result.onChangeUsername({ target: { value: username } });
@@ -112,13 +111,13 @@ describe('<HomePage />', () => {
 
   describe('changeRoute', () => {
     it('should be injected', () => {
-      const dispatch = expect.createSpy();
+      const dispatch = jest.fn();
       const result = mapDispatchToProps(dispatch);
-      expect(result.changeRoute).toExist();
+      expect(result.changeRoute).toBeTruthy();
     });
 
     it('should dispatch push when called', () => {
-      const dispatch = expect.createSpy();
+      const dispatch = jest.fn();
       const result = mapDispatchToProps(dispatch);
       const route = '/';
       result.changeRoute(route);
@@ -128,20 +127,20 @@ describe('<HomePage />', () => {
 
   describe('onSubmitForm', () => {
     it('should be injected', () => {
-      const dispatch = expect.createSpy();
+      const dispatch = jest.fn();
       const result = mapDispatchToProps(dispatch);
-      expect(result.onSubmitForm).toExist();
+      expect(result.onSubmitForm).toBeTruthy();
     });
 
     it('should dispatch loadRepos when called', () => {
-      const dispatch = expect.createSpy();
+      const dispatch = jest.fn();
       const result = mapDispatchToProps(dispatch);
       result.onSubmitForm(undefined);
       expect(dispatch).toHaveBeenCalledWith(loadRepos());
     });
 
     it('should preventDefault if called with event', () => {
-      const preventDefault = expect.createSpy();
+      const preventDefault = jest.fn();
       const result = mapDispatchToProps(() => { }); // tslint:disable-line:no-empty
       const evt = { preventDefault };
       result.onSubmitForm(evt);

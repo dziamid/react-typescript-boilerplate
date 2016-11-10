@@ -4,7 +4,6 @@
 
 import A from 'components/A';
 
-import expect = require('expect');
 import { shallow } from 'enzyme';
 import React = require('react');
 

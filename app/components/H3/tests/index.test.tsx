@@ -1,6 +1,5 @@
 import H3 from '../index';
 
-import expect = require('expect');
 import { shallow } from 'enzyme';
 import React = require('react');
 import ReactElement = __React.ReactElement;

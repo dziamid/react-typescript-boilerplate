@@ -1,6 +1,5 @@
 import H2 from 'components/H2';
 
-import expect = require('expect');
 import { shallow } from 'enzyme';
 import React = require('react');
 import ReactElement = __React.ReactElement;

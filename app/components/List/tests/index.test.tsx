@@ -1,4 +1,4 @@
-import expect = require('expect');
+
 import { render } from 'enzyme';
 import React = require('react');
 
@@ -10,7 +10,7 @@ describe('<List />', () => {
     const renderedComponent = render(
       <List component={ListItem} />
     );
-    expect(renderedComponent.find(ListItem)).toExist();
+    expect(renderedComponent.find(ListItem)).toBeTruthy();
   });
 
   it('should render the items', () => {
@@ -21,6 +21,6 @@ describe('<List />', () => {
     const renderedComponent = render(
       <List items={items} component={ListItem} />
     );
-    expect(renderedComponent.find(items)).toExist();
+    expect(renderedComponent.find(items)).toBeTruthy();
   });
 });

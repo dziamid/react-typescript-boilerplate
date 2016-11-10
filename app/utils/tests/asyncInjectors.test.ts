@@ -2,12 +2,10 @@
  * Test async injectors
  */
 
-import expect = require('expect');
 import configureStore from '../../store';
 import { createMemoryHistory } from 'react-router';
 import { put } from 'redux-saga/effects';
 import { fromJS } from 'immutable';
-
 
 import {
   injectAsyncReducer,
@@ -40,7 +38,7 @@ describe('asyncInjectors', () => {
   let store;
 
   describe('getAsyncInjectors', () => {
-    before(() => {
+    beforeEach(() => {
       store = configureStore({}, createMemoryHistory);
     });
 
@@ -72,7 +70,7 @@ describe('asyncInjectors', () => {
   });
 
   describe('helpers', () => {
-    before(() => {
+    beforeEach(() => {
       store = configureStore({}, createMemoryHistory);
     });
 

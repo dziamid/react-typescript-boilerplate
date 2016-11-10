@@ -1,5 +1,4 @@
 import { fromJS } from 'immutable';
-import expect = require('expect');
 
 import {
   selectGlobal,

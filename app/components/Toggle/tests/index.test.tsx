@@ -1,6 +1,5 @@
 import Toggle from '../index';
 
-import expect = require('expect');
 import { shallow } from 'enzyme';
 import { IntlProvider, defineMessages } from 'react-intl';
 import React = require('react');

@@ -1,7 +1,6 @@
 import App from '../index';
 import Footer from 'components/Footer';
 
-import expect = require('expect');
 import { shallow } from 'enzyme';
 import React = require('react');
 

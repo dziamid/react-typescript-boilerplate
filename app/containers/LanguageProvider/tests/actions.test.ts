@@ -1,4 +1,4 @@
-import expect = require('expect');
+
 import {
   changeLocale,
 } from '../actions';

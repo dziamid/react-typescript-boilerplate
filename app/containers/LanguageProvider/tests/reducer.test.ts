@@ -1,4 +1,4 @@
-import expect = require('expect');
+
 import languageProviderReducer from '../reducer';
 import { fromJS } from 'immutable';
 import {

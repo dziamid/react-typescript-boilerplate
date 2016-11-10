@@ -2,7 +2,6 @@
  * Test the repo list item
  */
 
-import expect = require('expect');
 import { shallow, mount } from 'enzyme';
 import React = require('react');
 

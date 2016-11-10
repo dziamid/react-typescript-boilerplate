@@ -4,7 +4,7 @@
 
 import request, { ResponseError } from '../request';
 import sinon = require ('sinon');
-import expect = require('expect');
+
 
 declare var window: IStubedWindow & Window;
 

@@ -1,6 +1,5 @@
 import ListItem from 'components/ListItem';
 
-import expect = require('expect');
 import { shallow } from 'enzyme';
 import React = require('react');
 

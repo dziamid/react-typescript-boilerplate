@@ -4,7 +4,6 @@
 
 import Button from 'components/Button';
 
-import expect = require('expect');
 import { shallow } from 'enzyme';
 import React = require('react');
 
@@ -36,7 +35,7 @@ describe('<Button />', () => {
   });
 
   it('should handle click events', () => {
-    const onClickSpy = expect.createSpy();
+    const onClickSpy = jest.fn();
     const renderedComponent = shallow(<Button onClick={onClickSpy} />);
     renderedComponent.find('a').simulate('click');
     expect(onClickSpy).toHaveBeenCalled();

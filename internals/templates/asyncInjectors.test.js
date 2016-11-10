@@ -39,7 +39,7 @@ describe('asyncInjectors', () => {
   let store;
 
   describe('getAsyncInjectors', () => {
-    before(() => {
+    beforeEach(() => {
       store = configureStore({}, memoryHistory);
     });
 
@@ -71,7 +71,7 @@ describe('asyncInjectors', () => {
   });
 
   describe('helpers', () => {
-    before(() => {
+    beforeEach(() => {
       store = configureStore({}, memoryHistory);
     });
 

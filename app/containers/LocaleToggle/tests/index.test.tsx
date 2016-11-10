@@ -2,7 +2,6 @@ import LocaleToggle, { mapDispatchToProps } from '../index';
 import { changeLocale } from '../../LanguageProvider/actions';
 import LanguageProvider from '../../LanguageProvider';
 
-import expect = require('expect');
 import { shallow, mount } from 'enzyme';
 import configureStore from '../../../store';
 import React = require('react');
@@ -13,7 +12,7 @@ import { translationMessages } from '../../../i18n';
 describe('<LocaleToggle />', () => {
   let store;
 
-  before(() => {
+  beforeEach(() => {
     store = configureStore({}, browserHistory);
   });
 
@@ -42,13 +41,13 @@ describe('<LocaleToggle />', () => {
   describe('mapDispatchToProps', () => {
     describe('onLocaleToggle', () => {
       it('should be injected', () => {
-        const dispatch = expect.createSpy();
+        const dispatch = jest.fn();
         const result = mapDispatchToProps(dispatch);
-        expect(result.onLocaleToggle).toExist();
+        expect(result.onLocaleToggle).toBeTruthy();
       });
 
       it('should dispatch changeLocale when called', () => {
-        const dispatch = expect.createSpy();
+        const dispatch = jest.fn();
         const result = mapDispatchToProps(dispatch);
         const locale = 'de';
         const evt = { target: { value: locale } };

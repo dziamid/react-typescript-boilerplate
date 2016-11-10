@@ -88,7 +88,7 @@
     "env": {
       "browser": true,
       "node": true,
-      "mocha": true,
+      "jest": true,
       "es6": true
     },
     "plugins": [
@@ -276,7 +276,6 @@
     "jest-cli": "^17.0.0",
     "json-loader": "0.5.4",
     "lint-staged": "3.0.2",
-    "mocha": "3.0.2",
     "ngrok": "2.2.2",
     "null-loader": "0.1.1",
     "offline-plugin": "3.4.2",

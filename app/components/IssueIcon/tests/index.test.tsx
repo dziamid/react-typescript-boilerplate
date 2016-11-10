@@ -1,6 +1,5 @@
 import IssueIcon from 'components/IssueIcon';
 
-import expect = require('expect');
 import { shallow } from 'enzyme';
 import React = require('react');
 

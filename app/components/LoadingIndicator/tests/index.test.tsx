@@ -1,6 +1,5 @@
 import LoadingIndicator from 'components/LoadingIndicator';
 
-import expect = require('expect');
 import { shallow } from 'enzyme';
 import React = require('react');
 

@@ -160,6 +160,33 @@
       }
     }
   },
+  "jest": {
+    "collectCoverageFrom": [
+      "app/**/*.{js,jsx}",
+      "!app/app.js",
+      "!app/routes.js"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "<rootDir>/app"
+    ],
+    "moduleNameMapper": {
+      ".*\\.css$": "<rootDir>/mocks/cssModule.js",
+      ".*\\.jpg$": "<rootDir>/mocks/image.js",
+      ".*\\.svg$": "<rootDir>/mocks/svg.js"
+    },
+    "setupTestFrameworkScriptFile": "<rootDir>/internals/testing/test-bundler.js",
+    "testRegex": "tests/.*\\.test\\.(ts|tsx|js)$",
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json"
+    ]
+  },
   "stylelint": {
     "extends": "stylelint-config-standard",
     "rules": {
